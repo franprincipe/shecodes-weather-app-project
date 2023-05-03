@@ -152,8 +152,6 @@ body {
     bottom: 8px;
   }
   footer {
-    position: absolute;
-    bottom: 420px;
-    left: 180px;
+   text-align: center;
     font-size: 10px;
   }
