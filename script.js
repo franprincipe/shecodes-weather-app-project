@@ -60,15 +60,16 @@ function formatDate(date) {
   function showTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector("#current-temp");
-    let descriptionElement = document.querySelector("#description");
-    let humidityElement = document.querySelector("#humidity");
-    let windElement = document.querySelector("#wind");
-    
     temperatureElement.innerHTML = `${temperature}`;
-    windElement.innerHTML =Math.round(response.data.wind.speed);
-    humidityElement.innerHTML = response.data.main.humidity;
-    descriptionElement.innerHTML = response.data.weather[0].description;
-  
+    
+    //let descriptionElement = document.querySelector("#description");
+    //descriptionElement.innerHTML = response.data.weather[0].description;
+
+    //let humidityElement = document.querySelector("#humidity");
+    //humidityElement.innerHTML = response.data.main.humidity;
+   
+    //let windElement = document.querySelector("#wind");
+    //windElement.innerHTML =Math.round(response.data.wind.speed);
   }
   function temperatureSearch(event) {
     event.preventDefault();

@@ -2,49 +2,42 @@ body {
     background-image: radial-gradient(#eeaeca, #94e9e4);
   }
 
-  h1,
-  
-  h3 {
-    position: relative;
-    color: black;
-  }
-  h1 {
-    left: 58px;
-    font-size: 14px;
-    bottom: 60px;
-  }
   h2 {
     position: relative;
-    left:76px;
+    left:270px;
+    bottom:65px;
     font-size: 16px;
+    font-weight:500 ;
     color: black;
   }
   
   h3 {
+    position: relative;
     left: 80px;
-    bottom: 64px;
+    bottom: 96px;
     font-size: 25px;
+    color: black;
   }
   h4 {
-    font-size: 45px;
+    font-size: 38px;
     font-weight: normal;
-    bottom: 68px;
-    left: 68px;
+    bottom: 102px;
+    left: 75px;
   }
  
   .degree {
     position: relative;
     left: 128px;
-    bottom: 118px;
-    font-size: 12px;
+    bottom: 150px;
+    font-size: 11px;
   }
   .container {
     margin-top: 200px;
     margin-bottom: 200px;
   }
   .card {
-    max-width: 450px;
-    max-height: 320px;
+    max-width: 430px;
+    max-height: 260px;
     margin: 0 auto;
     background-color: #fafdfc81;
     border-radius: 15px;
@@ -54,40 +47,43 @@ body {
   .row {
     left: 32px;
     position: relative;
-    bottom: 350px;
+    bottom: 318px;
     color: black;
+    
   }
   .day {
     font-weight: bold;
-    font-size: 16px;
-  }
-  .temp {
-    font-size: 12px;
-  }
-  .emoji {
-    font-size: 22px;
-  }
-  #wind{  
-    position: relative;
-    float: right;
-    bottom: 286px;
-    left: 16px;
     font-size: 14px;
   }
-
-#weatherDetails::first-letter{
+  .temp {
+    font-size: 10px;
+  }
+  .emoji {
+    font-size: 15px;
+  }
+  .weatherDetails{
+    display :block;
+    position: relative;
+    float: right;
+    bottom: 228px;
+    right: 60px;
+    font-size: 11.5px;
+    color: rgb(134, 134, 145);
+  }
+  
+.weatherDetails::first-letter{
   text-transform: capitalize;
 }
- #humidity{
+#date{
+  display:block;
   position: relative;
-  float: right;
-  bottom: 270px;
-  right: 54px;
+  left: 58px;
   font-size: 14px;
- } 
+  bottom: 60px;
+}
   #location {
     position: relative;
-    left: 330px;
+    left: 317px;
     bottom: 86px;
     border: 2px solid #ffffff;
     border-radius: 6px;
@@ -115,7 +111,7 @@ body {
     border: 2px solid #ffffff;
     border-radius: 6px;
     position: relative;
-    left:25px;
+    left:10px;
     line-height: normal;
     font-size: 16px;
     color: #ffffff;
@@ -138,7 +134,7 @@ body {
   #city {
     position: relative;
     left: 55px;
-    bottom: 100px;
+    bottom: 130px;
     font-size: 24px;
     font-weight: none;
     color: black;
@@ -147,7 +143,7 @@ body {
     border: none;
     display: block;
     position: relative;
-    left: 8px;
+    
     text-align: center;
     width: 220px;
     margin-bottom: 25px;
