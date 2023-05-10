@@ -26,6 +26,8 @@ function formatDate(date) {
   }
   document.getElementById("date").innerHTML = formatDate();
   
+
+
   function citySearch(city) {
     let cityName = document.querySelector("#city");
     cityName.innerHTML = city;
@@ -58,7 +60,15 @@ function formatDate(date) {
   function showTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector("#current-temp");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    
     temperatureElement.innerHTML = `${temperature}`;
+    windElement.innerHTML =Math.round(response.data.wind.speed);
+    humidityElement.innerHTML = response.data.main.humidity;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+  
   }
   function temperatureSearch(event) {
     event.preventDefault();

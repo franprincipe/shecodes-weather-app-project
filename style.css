@@ -1,8 +1,9 @@
 body {
     background-image: radial-gradient(#eeaeca, #94e9e4);
   }
+
   h1,
-  h2,
+  
   h3 {
     position: relative;
     color: black;
@@ -13,17 +14,24 @@ body {
     bottom: 60px;
   }
   h2 {
+    position: relative;
+    left:76px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  h3 {
     left: 80px;
     bottom: 64px;
     font-size: 25px;
   }
-  h3 {
+  h4 {
     font-size: 45px;
     font-weight: normal;
     bottom: 68px;
     left: 68px;
   }
-
+ 
   .degree {
     position: relative;
     left: 128px;
@@ -35,9 +43,9 @@ body {
     margin-bottom: 200px;
   }
   .card {
-    max-width: 420px;
+    max-width: 450px;
     max-height: 320px;
-    margin: 100px auto;
+    margin: 0 auto;
     background-color: #fafdfc81;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -46,7 +54,7 @@ body {
   .row {
     left: 32px;
     position: relative;
-    bottom: 486px;
+    bottom: 350px;
     color: black;
   }
   .day {
@@ -59,10 +67,27 @@ body {
   .emoji {
     font-size: 22px;
   }
-  
+  #wind{  
+    position: relative;
+    float: right;
+    bottom: 286px;
+    left: 16px;
+    font-size: 14px;
+  }
+
+#weatherDetails::first-letter{
+  text-transform: capitalize;
+}
+ #humidity{
+  position: relative;
+  float: right;
+  bottom: 270px;
+  right: 54px;
+  font-size: 14px;
+ } 
   #location {
     position: relative;
-    left: 300px;
+    left: 330px;
     bottom: 86px;
     border: 2px solid #ffffff;
     border-radius: 6px;
@@ -84,33 +109,13 @@ body {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
-  #prehumwin {
-    position: relative;
-    left: 230px;
-    bottom: 390px;
-    color: black;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 16px;
-    padding-left: 2px;
-    padding-top: 80px;
-  }
-  #description {
-    display: block;
-    position: relative;
-    left: 200px;
-    bottom: 180px;
-    font-size: 12.5px;
-    color: black;
-    line-height: 15px;
-    width: 14em;
-    text-align: justify;
-  }
+
+  
   #searchbtn {
     border: 2px solid #ffffff;
     border-radius: 6px;
     position: relative;
-    left: 25px;
+    left:25px;
     line-height: normal;
     font-size: 16px;
     color: #ffffff;
@@ -144,7 +149,7 @@ body {
     position: relative;
     left: 8px;
     text-align: center;
-    width: 180px;
+    width: 220px;
     margin-bottom: 25px;
     color: black;
     height: 36px;
