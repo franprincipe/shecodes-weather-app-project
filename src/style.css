@@ -1,15 +1,11 @@
 body {
     background-image: radial-gradient(#eeaeca, #94e9e4);
   }
-  h1{
-    font-size: 16px;
-    color: black; 
-  }
 
   h2 {
     position: relative;
-    left:270px;
-    bottom:65px;
+    left:250px;
+    bottom:58px;
     font-size: 16px;
     font-weight:500 ;
     color: black;
@@ -18,21 +14,22 @@ body {
   h3 {
     position: relative;
     left: 80px;
-    bottom: 96px;
+    bottom: 80px;
     font-size: 25px;
     color: black;
   }
   h4 {
+    position: relative;
     font-size: 38px;
     font-weight: normal;
-    bottom: 102px;
-    left: 75px;
+    bottom: 85px;
+    left: 74px;
   }
  
   .degree {
     position: relative;
-    left: 128px;
-    bottom: 150px;
+    left: 122px;
+    bottom: 128px;
     font-size: 11px;
   }
   .container {
@@ -49,9 +46,9 @@ body {
   }
   
   .row {
-    left: 32px;
     position: relative;
-    bottom: 318px;
+    left: 32px;
+    bottom: 313px;
     color: black;
     
   }
@@ -69,7 +66,7 @@ body {
     display :block;
     position: relative;
     float: right;
-    bottom: 228px;
+    bottom: 215px;
     right: 60px;
     font-size: 11.5px;
     color: rgb(134, 134, 145);
@@ -79,11 +76,8 @@ body {
   text-transform: capitalize;
 }
 #date{
-  display:block;
-  position: relative;
-  left: 58px;
-  font-size: 14px;
-  bottom: 60px;
+  font-size: 12.5px;
+font-weight: 400;
 }
   #location {
     position: relative;
@@ -137,10 +131,10 @@ body {
   }
   #city {
     position: relative;
-    left: 55px;
-    bottom: 130px;
-    font-size: 24px;
-    font-weight: none;
+    left: 60px;
+    bottom: 115px;
+    font-size: 20px;
+    font-weight: 500;
     color: black;
   }
   #city-input {
@@ -156,7 +150,6 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     bottom: 8px;
   }
-  footer {
-   text-align: center;
-    font-size: 10px;
+  small {
+    font-size: 12px;
   }

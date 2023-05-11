@@ -24,7 +24,7 @@ function formatDate(date) {
 
   return currentDate;
 }
-document.getElementById("date").innerHTML = formatDate();
+document.getElementById("date").innerHTML = formatDate(response.data.dt * 1000);
 
 function citySearch(city) {
   let cityName = document.querySelector("#city");
@@ -40,13 +40,13 @@ form.addEventListener("submit", changeCity);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("h3");
+  let temperatureElement = document.querySelector("h4");
   temperatureElement.innerHTML = 45;
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("h3");
+  let temperatureElement = document.querySelector("h4");
   temperatureElement.innerHTML = 15;
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -68,6 +68,12 @@ function showTemperature(response) {
  
   let windElement = document.querySelector("#wind");
   windElement.innerHTML =Math.round(response.data.wind.speed);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    ''
+  );
 }
 function temperatureSearch(event) {
   event.preventDefault();
