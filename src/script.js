@@ -24,7 +24,6 @@ function formatDate(date) {
 
   return currentDate;
 }
-document.getElementById("date").innerHTML = formatDate(response.data.dt * 1000);
 
 function citySearch(city) {
   let cityName = document.querySelector("#city");
@@ -68,6 +67,7 @@ function showTemperature(response) {
  
   let windElement = document.querySelector("#wind");
   windElement.innerHTML =Math.round(response.data.wind.speed);
+  document.getElementById("date").innerHTML = formatDate(response.data.dt * 1000);
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
