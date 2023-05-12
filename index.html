@@ -19,6 +19,7 @@
 <body>
      
        <div class="container">
+        <div class = " weather-app-wrapper">
         <div class="card">
             <div class="card-body">
             <form id="search-form">
@@ -41,11 +42,11 @@
             
           <h1 id ="date"></h1>
       <h2      id="description">Mostly clouldy</h2>
-            <h3 id="icon">
-                🌧</h3>
-                <h4 id = "current-temp">20</h4>
-                <div class="degree">
-                    <a href="#" id="celsius-link">°C</a> |
+            <img src="" alt="Clear" id="icon"/>
+                </h3>
+                <h4 id = "current-temp">15</h4>
+                <div class="units">
+                    <a href="#" id="celsius-link" class ="active">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a>
                 </div>
            
@@ -57,11 +58,11 @@
                 
                 <div class = "weatherDetails">
                 
-                    <div id = "humidity">
-                      Humidity: <span></span>%
+                    <div >
+                      Humidity: <span id = "humidity"></span>%
                     </div>
-                    <div id = "wind">
-                      Wind: <span ></span>km/h
+                    <div>
+                      Wind: <span  id = "wind"></span> km/h
                       </div>
                 </div>
             
@@ -109,11 +110,10 @@
                   </div></div></div>
               </div>
             </div>
-          </form>
         </div>
       </div>
-      <h1></h1>
-    </div>
+  
+    </div> </div>
   </body>
   <script src="/src/script.js"></script>
   <small>

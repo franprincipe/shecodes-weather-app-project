@@ -1,7 +1,11 @@
 body {
     background-image: radial-gradient(#eeaeca, #94e9e4);
   }
-
+h1{
+  color:black;
+  font-size: 14px;
+  font-weight: 400;
+}
   h2 {
     position: relative;
     left:250px;
@@ -26,11 +30,20 @@ body {
     left: 74px;
   }
  
-  .degree {
+  .units {
     position: relative;
     left: 122px;
     bottom: 128px;
+    color: black;
     font-size: 11px;
+    text-decoration:none;
+  }
+  .units .active{
+    color: black;
+    cursor: default;
+  }
+  .units .active:hover{
+    text-decoration: none;
   }
   .container {
     margin-top: 200px;
@@ -75,10 +88,7 @@ body {
 .weatherDetails::first-letter{
   text-transform: capitalize;
 }
-#date{
-  font-size: 12.5px;
-font-weight: 400;
-}
+
   #location {
     position: relative;
     left: 317px;
@@ -140,8 +150,7 @@ font-weight: 400;
   #city-input {
     border: none;
     display: block;
-    position: relative;
-    
+    position: relative;  
     text-align: center;
     width: 220px;
     margin-bottom: 25px;
@@ -152,4 +161,5 @@ font-weight: 400;
   }
   small {
     font-size: 12px;
+    text-align: center;
   }
