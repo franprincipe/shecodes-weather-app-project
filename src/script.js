@@ -69,11 +69,6 @@ function showTemperature(response) {
   windElement.innerHTML =Math.round(response.data.wind.speed);
   document.getElementById("date").innerHTML = formatDate(response.data.dt * 1000);
 
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    ''
-  );
 }
 function temperatureSearch(event) {
   event.preventDefault();
