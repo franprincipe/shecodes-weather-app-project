@@ -73,11 +73,13 @@ h5 {
 }
 #description {
     text-align: left;
-    text-transform: capitalize;
     margin-bottom: 8px;
     color:#01a0ac;
     font-size:16px;
     font-weight: 350;
     line-height: 18px;
    
+}
+#description::first-letter{
+    text-transform: capitalize;
 }
