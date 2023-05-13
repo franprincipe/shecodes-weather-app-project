@@ -39,9 +39,15 @@ h5 {
     font-size: 20px;
     font-weight: 400;
 }
+.container {
+ display: flex; 
+ margin-top: 200px;
+ margin-bottom: 200px;  
+}
 .app-wrapper {
     margin:30px auto;
     font-size: 12px;
+    text-align: center;
  
 }
 .weather-app {
