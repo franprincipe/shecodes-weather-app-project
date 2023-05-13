@@ -20,6 +20,7 @@ let days = [
 let day = days[date.getDay()];
 return `${day}, ${hours}:${minutes}`;
 }
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
@@ -27,6 +28,7 @@ function displayTemperature(response) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
+    let iconElement = document.querySelector("#icon");
    
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML=response.data.name;
@@ -34,10 +36,12 @@ function displayTemperature(response) {
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML =Math.round(response.data.wind.speed);
     dateElement.innerHTML= formatDate(response.data.dt * 1000); 
+    iconElement.setAttribute("src",  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
  }
 
-
 let apiKey = "57b2c40fdae71a6ba41d72685e3226e2";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Willow Spring&appid=${apiKey}&units=imperial`;
+let city = "Mexico City";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
