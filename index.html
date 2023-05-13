@@ -16,107 +16,42 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Weather App</title>
   </head>
-<body>
-     
-       <div class="container">
-        <div class = " weather-app-wrapper">
-        <div class="card">
-            <div class="card-body">
-            <form id="search-form">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  id="city-input"
-                  class ="form-contr"
-                  placeholder="Search City"
-                  autocomplete="off"
-                  autofocus="on"
-                  aria-describedby="button-addon2"
-                />
-              <input id ="searchbtn" type ="submit" value="Search"/>
-            </form></div>
-            
-              <button id = "location">
-                Current Location
-              </button>
-            
-          <h1 id ="date"></h1>
-      <h2      id="description">Mostly clouldy</h2>
-            <img src="" alt="Clear" id="icon"/>
-                </h3>
-                <h4 id = "current-temp">15</h4>
-                <div class="units">
-                    <a href="#" id="celsius-link" class ="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                </div>
-           
-              <p id="city"> 
-                Raleigh
-              </p>
-             
-           
-                
-                <div class = "weatherDetails">
-                
-                    <div >
-                      Humidity: <span id = "humidity"></span>%
-                    </div>
-                    <div>
-                      Wind: <span  id = "wind"></span> km/h
-                      </div>
-                </div>
-            
-               
-            <div class="container text-center">
-              <div class="row">
-                  
-                  <div class="col-2">
-                  <div class="flex-column">
-                  <div class="day">Mon</div>
-                  <div class="emoji">⛅</div>
-                  <div class="temp">79°</div>
-                  </div></div>
-              
-                  
-                  <div class="col-2">
-                  <div class="flex-column">
-                  <div class="day">Tue</div>
-                  <div class="emoji">⛅</div>
-                  <div class="temp">75°</div>
-                  </div></div>
-                
-
-                  <div class="col-2">
-                  <div class="flex-column">
-                  <div class="day">Wed</div>
-                  <div class="emoji">⛅</div>
-                  <div class="temp">72°</div>
-                  </div></div>
-                
-              
-                  <div class="col-2">
-                  <div class="flex-column">
-                  <div class="day">Thu</div>
-                  <div class="emoji">🌧</div>
-                  <div class="temp">72°</div>
-                  </div></div>
-                
-
-                  <div class="col-2">
-                  <div class="flex-column">
-                  <div class="day">Fri</div>
-                  <div class="emoji">🌧</div>
-                  <div class="temp">63°</div>
-                  </div></div></div>
-              </div>
-            </div>
-        </div>
-      </div>
-  
-    </div> </div>
-  </body>
-  <script src="/src/script.js"></script>
-  <small>
+<body>   
+  <div class = "container">
+    <div class = "weather-app">
+    <h1>
+        Raleigh
+    </h1>
+    <ul>
+        <li>
+            Friday 05:00
+        </li>
+        <li>
+            Clear
+        </li>
+    </ul>
+ <div class = "row">
+    <div class = "col-6">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear"
+        />
+        12°C | °F
+    </div>
+    <div class = "col-6">
+        <ul>
+            <li>
+              Humidity: 75%  
+            </li>
+            <li>
+                Wind: 5 km/h
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+<small>
   <a href="https://github.com/franprincipe/shecodes-weather-app-project">Open-source code</a> by Francisca Principe
   </small>
+</div>
+</body>
+  <script src="/src/script.js"></script>
   </html>
