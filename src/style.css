@@ -10,48 +10,55 @@ h1, h2, ul{
     padding: 0;
 }
 
-h1{
-    margin: 0;
-    padding:0;
+
+h1 {
     color:#f196c4;
-    font-size:18px;
+    
+    font-size:16px;
     font-weight: 350;
     line-height: 5px;
     text-align: left;
-}
+    }
+
 h2{
-    position: relative;
+    text-align: left;
     list-style: none;
-    margin: 0;
-    padding:0;
+    margin-bottom: 8px;
     color:#01a0ac;
-    font-size:18px;
+    font-size:16px;
     font-weight: 350;
     line-height: 18px;
-    text-align: center;  
+   
 }
 li{
+    position: relative;
+    left:10px;
     list-style: none;
     margin: 0;
     padding:0;
     color:#c0186c;
-    font-size:12px;
+    font-size:11px;
     font-weight: 350;
     line-height: 18px;
+    
     
 }
 p {
     position: relative;
-    top:20px;
-    left: 20px;
+    top:10px;
+    left: 18px;
     color: black;
     font-size: 20px;
     font-weight: 400;
 }
+.container {
+    display: flex;   
+    max-width: 600px; 
+    }
 .app-wrapper {
-    max-width:600px;
     margin:30px auto;
     font-size: 12px;
+ 
 }
 .weather-app {
     padding: 20px;
@@ -60,25 +67,28 @@ p {
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
-.overview{
+.date{
   margin-bottom: 10px;
 }
+.overview{
+ margin-bottom: 10px;}
+
 .weather-temperature img {
   position: relative;
-  bottom: 15px;
-  left: 20px;
-  height: 60px;
-  width: 60px; 
+  bottom:10px;
+  left: 22.2px;
+  height: 50px;
+  width: 50px; 
 }
 .weather-temperature strong {
     position: relative;
-    right: 68px;
-    top: 20px;
+    right: 28px;
+    top: 24px;
     font-weight: 400;
     font-size: 42px;
 }
 .weather-temperature .units {
    position: relative; 
-   right: 80px;
+   right: 10px;
    font-size: 14px;
 }
