@@ -77,6 +77,14 @@ h5 {
    top:5px;
    font-size: 12px;
 }
+.weather-temperature .active{
+    text-decoration: none;
+color: black;
+cursor: default;
+}
+.weather-temperature .active:hover{
+    text-decoration: none;
+    }
 #description {
     text-align: left;
     margin-bottom: 8px;
@@ -88,4 +96,7 @@ h5 {
 }
 #description::first-letter{
     text-transform: capitalize;
+}
+#fahrenheit-link {
+    text-decoration: none;
 }
