@@ -102,6 +102,9 @@ cursor: default;
         0 17px 50px 0 rgba(0, 0, 0, 0.19);
         bottom: 8px;  
     }
+    #search-button:hover{
+        
+    }
     #city-input{
         position: relative;
         right:50 px;
