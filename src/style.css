@@ -52,7 +52,7 @@ h5 {
 }
 .weather-app {
     padding: 20px;
-    border:1px solid rgb(146, 211, 205);;
+    border:1px solid rgb(146, 211, 205);
     background-color:  #f0daea81;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
@@ -84,6 +84,35 @@ cursor: default;
 }
 .weather-temperature .active:hover{
     text-decoration: none;
+    }
+    #search-button {
+        position: relative;
+        right: 34px;
+        border: 2px solid  rgb(121, 221, 211);
+        border-radius: 6px;
+        line-height: normal;
+        font-size: 16px;
+        color: #ffffff;
+        background: #f3b8d48e;
+        transition: all 150ms ease-in-out;
+        width: 80px;
+        height: 34px;
+        text-decoration: none;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        bottom: 8px;  
+    }
+    #city-input{
+        position: relative;
+        right:50 px;
+        border:2px solid rgb(121, 221, 211);
+        text-align: center;
+        width: 240px;
+        color: black;
+        height: 34px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        bottom: 8px;   
     }
 #description {
     text-align: left;
