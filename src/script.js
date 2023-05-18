@@ -20,49 +20,52 @@ let days = [
 let day = days[date.getDay()];
 return `${day}, ${hours}:${minutes}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days =["Sun", "Mon","Tue", "Wed", "Thu", "Fri", "Sat"];
 
-function displayForecast() {
+  return days[day];
+}
+
+function displayForecast(response) {
+
+ let forecast = response.data.daily;
+
     let forecastElement = document.querySelector("#forecast");
 
-    let days = ["Tue","Wed","Thu","Fri"];
-    
     let forecastHTML = `<div class="row">`;
-    
-    days.forEach(function(day){
+      forecast.forEach(function (forecastDay, index) {
+        if (index < 6) {
         forecastHTML =  
-    forecastHTML +   
+          forecastHTML +   
     `
     <div class="col-2">
-      <div class="weather-forecast-date"> 
-        ${day}
-      </div>
+      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       <img 
-      src="https://openweathermap.org/img/wn/04d@2x.png"
+      src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon}@2x.png"
       alt=""
-      width="36"
+      width="42"
       />
     <div class="weather-forecast-temperatures">
       <span class="weather-forecast-temperatures-max"> 
-        18°</span> |
+        ${Math.round(forecastDay.temp.max)}°</span> |
       <span class="weather-forecast-temperatures-min">
-        12°</span>
+        ${Math.round(forecastDay.temp.min)}°</span>
     </div>
   </div>
   `;
+    }
 });
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;   
 }
-
-
-
-
-
-
-
-
-
-
+function getForecast(coordinates) {
+  let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 
 function displayTemperature(response) {
@@ -85,9 +88,10 @@ function displayTemperature(response) {
     iconElement.setAttribute(
         "src",  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
+    getForecast(response.data.coord);
  }
 function search(city) {  
- let apiKey = "57b2c40fdae71a6ba41d72685e3226e2";
+ let apiKey = "a710bd8bd76400c9658ef649d9e81728";
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(displayTemperature);
 }
@@ -121,7 +125,7 @@ let celsiusTemperature = null;
 
 search("Willow Spring");
 
-displayForecast();
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
